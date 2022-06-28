@@ -8,7 +8,7 @@ import verifiedIcon from '../images/twitter-verified.png';
 function ScreenShot() {
   const [tweet, setTweet] = useState('');
   const [isLoading, setIsLoading] = useState(true);
-  const [tweetId, setTweetId] = useState('1540750611590807553');
+  const [tweetId, setTweetId] = useState('1541894569922543624');
   const link = useRef();
   const colors = [
     '#90F1EF',
@@ -167,7 +167,10 @@ function ScreenShot() {
                   style={{ color: '#088af4' }}
                 />
               </div>
-              <small className="web--address">address</small> <br />
+              <small className="web--address">
+                https://threadss.netlify.app
+              </small>{' '}
+              <br />
             </div>
 
             <div className="tweet--card--btns">

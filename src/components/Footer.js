@@ -22,6 +22,18 @@ function Footer() {
           <span>&copy;</span> <span>{new Date().getFullYear()}</span> Starkweb
           Technologies
         </p>
+        <p>
+          If you can't find a thread you're looking for or you want your tweet
+          to get featured in our tweet gallery, please tag us on twitter to the
+          post{' '}
+          <a
+            href="https://twitter.com/threads_rd"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            @threads_rd
+          </a>
+        </p>
       </section>
     </footer>
   );

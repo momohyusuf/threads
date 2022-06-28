@@ -84,8 +84,9 @@ button {
   color: $secondaryColor;
   padding: 0.6em 1em;
   border-radius: 5px;
-  margin: 1em 0;
+  margin: 2em 0;
   cursor: pointer;
+  width: 100%;
   a {
     color: $secondaryColor;
   }
@@ -95,6 +96,9 @@ button {
     a {
       color: $primaryColor;
     }
+  }
+  @media screen and (min-width: 600px) {
+    width: 20em;
   }
 }
 .logo {
@@ -127,6 +131,9 @@ button {
   100% {
     transform: rotate(360deg);
   }
+}
+.active {
+  border-bottom: 3px solid black;
 }
 
 // end Global styles
@@ -213,9 +220,7 @@ header {
     }
   }
 }
-.active {
-  border-bottom: 3px solid black;
-}
+
 .intro--section {
   max-width: $maximumWidth;
   width: 100%;
@@ -612,7 +617,7 @@ option {
   }
 }
 .snapshot--card--container {
-  max-width: 400px;
+  max-width: 350px;
   box-shadow: $shadow;
   border-radius: 10px;
   margin: 0 2em;
@@ -654,6 +659,5 @@ footer {
   }
   p {
     color: $secondaryColor;
-    text-align: center;
   }
 }
