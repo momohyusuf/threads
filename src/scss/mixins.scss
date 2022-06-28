@@ -1,0 +1,8 @@
+@mixin flexItems {
+  display: flex;
+  align-items: center;
+}
+@mixin gridItems {
+  display: grid;
+  place-items: center;
+}
