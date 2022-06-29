@@ -517,6 +517,7 @@ option {
 .tweet--card--container {
   background-color: $secondaryColor;
   border: 1px solid rgb(169, 169, 169);
+  box-shadow: $shadow;
 }
 
 .tweet--card {
@@ -641,6 +642,7 @@ footer {
     max-width: $maximumWidth;
     width: 100%;
     margin: 0 auto;
+    padding: 0 0.8em;
   }
   ul {
     display: inline-flex;
@@ -658,6 +660,7 @@ footer {
     }
   }
   p {
-    color: $secondaryColor;
+    color: black;
+    font-size: 0.8rem;
   }
 }

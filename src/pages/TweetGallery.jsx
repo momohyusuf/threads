@@ -118,7 +118,10 @@ function TweetGallery({ images, display }) {
                     style={{ color: '#088af4' }}
                   />
                 </div>
-                <small className="web--address">address</small> <br />
+                <small className="web--address">
+                  https://threadss.netlify.app
+                </small>
+                <br />
               </div>
 
               <div className="tweet--card--btns">
