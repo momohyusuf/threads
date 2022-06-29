@@ -54,7 +54,7 @@ improve more on my Javascript and React Knowlegde
 ### Useful resources
 React official documentation,
 Redux official documentation,
-Twitter developer 
+Twitter developer,
 Rapid Api hub
 
 ## Author
