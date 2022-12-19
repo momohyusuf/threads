@@ -113,7 +113,6 @@ button {
 
 .spin {
   position: absolute;
-
   width: 48px;
   height: 48px;
   border: 5px solid $primaryColor;
@@ -123,7 +122,6 @@ button {
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
-
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -135,7 +133,6 @@ button {
 .active {
   border-bottom: 3px solid black;
 }
-
 // end Global styles
 //
 
@@ -282,10 +279,16 @@ header {
   transform: translate(-100%);
   padding-right: 3em;
   transition: $transition;
+
   .sidebar--content {
     background-color: $primaryColor;
+    width: 80%;
     height: 100%;
     padding: 1.5em;
+    @media screen and (min-width: 600px) {
+      width: 40%;
+      margin-right: 1em;
+    }
   }
   .sidebar--header {
     border-bottom: 1px solid $secondaryColor;
@@ -416,39 +419,19 @@ option {
 }
 
 // ////////////////////// single thread section styling
-.single--thread--header {
-  max-width: $maximumWidth;
-  width: 100%;
-  margin: 0 auto;
-  padding: 1em;
-  font-size: 1.3rem;
-
-  a {
-    color: black;
-    cursor: pointer;
-    position: absolute;
-    top: 22px;
-  }
-  p {
-    margin-left: 50px;
-    font-weight: 600;
-  }
+.single--thread--section {
+  display: grid;
+  place-items: center;
 }
+
 .single--thread--content--container {
-  width: 100%;
-  max-width: $maximumWidth;
-  margin: 0 auto;
   padding: 7em 1.2em;
   .single--thread--content--header {
     @include flexItems;
-
+    column-gap: 1em;
     img {
       border-radius: 65%;
-      width: 80px;
-      height: 50px;
-      margin-right: 2em;
     }
-    margin-bottom: 0.5em;
   }
 
   .author--name {
@@ -471,7 +454,7 @@ option {
     border-radius: 5px;
     color: $secondaryColor;
     padding: 0 4px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
   .single--thread--main--content {
     margin: 1.5em 0;
@@ -501,136 +484,6 @@ option {
       font-size: 1.4rem;
       max-width: 800px;
     }
-  }
-}
-
-// gallery section styling
-.gallery--section {
-  max-width: $maximumWidth;
-  margin: 0 auto;
-  width: 100%;
-
-  @include gridItems;
-  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
-  gap: 1.5em;
-}
-.tweet--card--container {
-  background-color: $secondaryColor;
-  border: 1px solid rgb(169, 169, 169);
-  box-shadow: $shadow;
-}
-
-.tweet--card {
-  background-color: white;
-  padding: 0.5em 0.8em;
-  width: 100%;
-  display: block;
-  position: relative;
-
-  .tweeted--text {
-    font-size: 0.8rem;
-    margin: 0.5em 0;
-    opacity: 0.9;
-    @media screen and (min-width: 600px) {
-      font-size: 0.9rem;
-    }
-  }
-  .tweeted--image {
-    max-height: 160px;
-
-    img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 50%;
-      max-height: 160px;
-      border-radius: 5px;
-    }
-  }
-  .tweet--card--footer {
-    @include flexItems;
-    min-width: 14em;
-    justify-content: space-between;
-    img {
-      border-radius: 50%;
-      margin-right: 1em;
-    }
-    p {
-      text-transform: capitalize;
-      margin-bottom: 0;
-      font-size: 0.8rem;
-    }
-    small {
-      font-size: 0.6rem;
-      opacity: 0.9;
-    }
-    .tweet--card--user--info {
-      @include flexItems;
-    }
-    .tweet--icon {
-      font-size: 1.2rem;
-    }
-  }
-  .web--address {
-    position: absolute;
-    right: 10px;
-    font-size: 0.5rem;
-    font-style: italic;
-  }
-}
-
-.tweet--card--btns {
-  @include flexItems;
-  justify-content: space-between;
-  padding: 0 1em;
-  img {
-    width: 15px;
-  }
-  button {
-    font-size: 1.3rem;
-    cursor: pointer;
-    transition: $transition;
-    &:hover {
-      color: $primaryColor;
-    }
-  }
-}
-
-// screenShort section styling
-.verified--icon {
-  width: 10px;
-  margin-left: 0.2em;
-}
-
-.snapshot--section {
-  max-width: $maximumWidth;
-  width: 100%;
-  margin: 0 auto;
-  @include gridItems;
-}
-.snapshot--section--header {
-  padding-top: 8em;
-  padding-bottom: 3em;
-  padding-inline: 1.5em;
-
-  input {
-    width: 20em;
-  }
-}
-.snapshot--card--container {
-  max-width: 350px;
-  box-shadow: $shadow;
-  border-radius: 10px;
-  margin: 0 2em;
-}
-.tweeted--image {
-  max-height: 70px;
-}
-.instruction {
-  max-width: 500px;
-  margin: 2em 1.5em;
-  h3 {
-    text-align: center;
   }
 }
 

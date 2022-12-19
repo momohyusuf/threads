@@ -1,12 +1,7 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-import {
-  AiOutlineClose,
-  AiFillHome,
-  AiFillPicture,
-  AiFillCamera,
-} from 'react-icons/ai';
+import { AiOutlineClose, AiFillHome } from 'react-icons/ai';
 import { MdOutlineMessage, MdBookmarks } from 'react-icons/md';
 
 import { closeSideBar } from '../features/tweet/tweetSlice';
@@ -48,16 +43,8 @@ function Sidebar() {
             <NavLink to="threads">Threads</NavLink>
           </li>
           <li>
-            <AiFillPicture style={style} />
-            <NavLink to="gallery">Tweet Gallery</NavLink>
-          </li>
-          <li>
             <MdBookmarks style={style} />
             <NavLink to="bookmark">Bookmarks</NavLink>
-          </li>
-          <li>
-            <AiFillCamera style={style} />
-            <NavLink to="createSnapshot">Tweet Snapshot</NavLink>
           </li>
         </ul>
       </section>

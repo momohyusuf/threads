@@ -24,11 +24,13 @@ function Navbar() {
     >
       <section className="navbar--content">
         <div>
-          <img
-            className="logo"
-            src={pageHeight > value ? logoBlue : logo}
-            alt="thread logo"
-          />
+          <NavLink to="/" style={style}>
+            <img
+              className="logo"
+              src={pageHeight > value ? logoBlue : logo}
+              alt="thread logo"
+            />
+          </NavLink>
         </div>
 
         <button
@@ -41,29 +43,14 @@ function Navbar() {
         </button>
         <ul className="nav--links">
           <li>
-            <NavLink to="/" style={style}>
-              Home
-            </NavLink>
-          </li>
-          <li>
             <NavLink style={style} to="threads">
               Threads
             </NavLink>
           </li>
-          <li>
-            <NavLink style={style} to="gallery">
-              Tweet Gallery
-            </NavLink>
-          </li>
+
           <li>
             <NavLink style={style} to="bookmark">
               Bookmarks
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink style={style} to="createSnapshot">
-              Tweet Snapshot
             </NavLink>
           </li>
         </ul>

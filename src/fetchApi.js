@@ -6,9 +6,9 @@ export default function useGetPosts() {
   const [images, setImages] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const client = contentful.createClient({
-    space: process.env.REACT_APP_SPACEID,
+    space: 'fkhe1sr2t377',
     environment: 'master',
-    accessToken: process.env.REACT_APP_ACCESS_TOKEN,
+    accessToken: 'LP1rjwzW4itxZEUFuifnvyUBsZnimBDFXYkCSxXxx5E',
   });
 
   useEffect(() => {

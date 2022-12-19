@@ -5,12 +5,10 @@ import { Routes, Route } from 'react-router-dom';
 import SharedLayout from './components/SharedLayout';
 import useGetPosts from './fetchApi';
 import Threads from './pages/Threads';
-import TweetGallery from './pages/TweetGallery';
 import Error from './pages/Error';
 import Home from './pages/Home';
 import BookmarkPage from './pages/BookmarkPage';
 import SinglePost from './pages/SinglePost';
-import CreateSnapshot from './pages/CreateSnapshot';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
@@ -46,9 +44,7 @@ function App() {
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Home posts={posts} images={images} />} />
         <Route path="threads" element={<Threads posts={posts} />} />
-        <Route path="gallery" element={<TweetGallery images={images} />} />
         <Route path="bookmark" element={<BookmarkPage />} />
-        <Route path="createSnapshot" element={<CreateSnapshot />} />
         <Route path="about" element={<About />} />
         <Route path="contact" element={<Contact />} />
         <Route path="privacy" element={<Privacy />} />
